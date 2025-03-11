@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <canvas id="threejs-canvas"></canvas>
+    <nav>
+        <img src="./img/mylogo.png" alt="logo" id="logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#do">What I Do</a></li>
+            <li><a href="#portf">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-image">
+            <img src="./img/IMG_8409.jpg" alt="Profile Picture">
+        </div>
+        <div class="hero-description">
+            <h1>Hi, I'm Helmi Hamraoui</h1>
+            <p>Web Developer</p>
+            <p>Specializing in Full Stack Development</p>
+            <p>I'm proficient in Java, JavaScript, and Python</p>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Passionate about Web Development and its diverse applications, I sharpened my competencies enrolling in an intensive bootcamp in IT. Thanks to my fast learning abilities and eye for details, I was able to fully grasp the content, achieving outstanding results and showcasing my skills in innovative real-life applications. I enjoy collaborating with others and always up for a challenge, I make sure to welcome every learning opportunity and I aim to join a dynamic team in which I am able to put my skills into practice and build a fulfilling career as a developer.</p>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="education-container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3>1st Year in Computer Engineering</h3>
+                    <p>ISSAT Kasserine</p>
+                    <p>09/2023 – 05/2024</p>
+                    <p>Currently completing first year of computer engineering studies</p>
+                </div>
+                <div class="education-item">
+                    <h3>Baccalaureate Diploma in Information Technology</h3>
+                    <p>Secondary School Ibn Haithem, Beja</p>
+                    <p>09/2022 – 06/2023</p>
+                </div>
+                <div class="education-item">
+                    <h3>American Certification in Full Stack Web Development</h3>
+                    <p>Coding Dojo Africa</p>
+                    <p>09/2024 – 02/2025</p>
+                    <ul>
+                        <li>Intensive bootcamp in 3 full stacks (Python, JS, and Java)</li>
+                        <li>Passed Belt exams, assignments and code reviews</li>
+                        <li>Developed three projects with innovative features</li>
+                        <li>Soft skills and English Language training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><img src="./img/front-end.png" alt="front-end"></div>
+                    <h3>Front-end</h3>
+                    <p>HTML, CSS, JavaScript, React, Angular, Material UI, Bootstrap, TypeScript</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><img src="./img/backend.png" alt="back-end"></div>
+                    <h3>Back-end</h3>
+                    <p>Flask, Python, Express JS, Node JS, Socket.io, Java, SpringBoot, SpringSecurity, WebSocket</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 91%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><img src="./img/database-management.png" alt="database"></div>
+                    <h3>DataBase</h3>
+                    <p>MySQL, MongoDB, SQLite</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Tools</h3>
+                    <p>Git, Figma, Trello, VS Code, Postman, IntelliJ</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="do">
+        <div class="services-container">
+            <h2>What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="./img/software.png" alt="web dev"></div>
+                    <h3>Web Development</h3>
+                    <p>Custom website development from concept to deployment. Responsive design and clean code.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="./img/web-design.png" alt="design"></div>
+                    <h3>Design</h3>
+                    <p>Keeping it simple. Centered on content and functionality</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="./img/problem-solving-skills.png" alt="problem-solving"></div>
+                    <h3>Problem Solving</h3>
+                    <p>Creative approach to research, analysis, and decision-making</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portf">
+        <div class="portfolio-container">
+            <h2>My Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="./img/regive.png" alt="Regive">
+                    <div class="portfolio-overlay">
+                        <h3>I developed a website that aims to allow individuals to exchange items or donate them in a user-friendly way encouraging community engagement, charity, and recycling.</h3>
+                        <p>HTML, CSS, JavaScript, Bootstrap, Flask, Python, socket.io, MySQL</p>
+                        <a href="https://github.com/helmihamraoui/Python-Project" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./img/cooke.png" alt="Cooke Me">
+                    <div class="portfolio-overlay">
+                        <h3>A web application that helps users discover and create recipes by solving everyday common challenges like lack of ingredients according to dietary needs/preferences, or time constraints. Our platform provides a seamless and dynamic user experience allowing them to get tailored recipes with the ability to chat with users providing further support and fostering community engagement.</h3>
+                        <p>socket.io, HTML, CSS, Bootstrap, Angular, Material UI, TypeScript, Express.js, Node.js</p>
+                        <a href="https://github.com/med-mokhtar-nasrali/MERN-Project" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./img/carelink.png" alt="Care Link">
+                    <div class="portfolio-overlay">
+                        <h3>A web application that aims to digitalize the healthcare and clinic management sector by allowing patients to book appointments, visualize medical history while improving communication between Doctors, Medical Staff, and Patients making the process more efficient and reducing the risk of error. By streamlining these processes, CareLink's main goal is to improve the overall patient experience making it easier and simpler.</h3>
+                        <p>HTML, CSS, Bootstrap, Angular, TypeScript, Java, SpringBoot, SpringSecurity, WebSocket</p>
+                        <a href="https://github.com/helmihamraoui/Project-Java" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="307ffe27-374c-4919-9601-e7b306ae99ed">
+    
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" >
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" >
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message" ></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <p id="responseMessage"></p>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>Ariana, Tunisia</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p>+216 55224300</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>helmihamraoui54@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/helmihamraoui"><img src="./img/github.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/helmi-hamroui-49ab98329/"><img src="./img/linkedin-icon-1024x1024-z5dvl47c.png" alt="linkedin"></a>
+                        <a href="https://wa.me/55224300"><img src="./img/WhatsApp.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
