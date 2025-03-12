@@ -374,7 +374,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     min-height: 310px;
-    overflow-y: hidden;
+    overflow-y:scroll;
 }
 
 .portfolio-item:hover .portfolio-overlay {
