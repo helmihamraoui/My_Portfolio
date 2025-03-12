@@ -11,7 +11,7 @@
 <body>
     <canvas id="threejs-canvas"></canvas>
     <nav>
-        <img src="./img/mylogo.png" alt="logo" id="logo">
+        <a href="index.html"><img src="./img/mylogo.png" alt="logo" id="logo"></a>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,6 +20,10 @@
             <li><a href="#portf">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-icon">🌙</span>
+        </button>
+        
     </nav>
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -31,6 +35,15 @@
             <p>Web Developer</p>
             <p>Specializing in Full Stack Development</p>
             <p>I'm proficient in Java, JavaScript, and Python</p>
+            <a href="./pdfs/helmi-hamraoui-cv.pdf" download="Helmi_Hamraoui_CV.pdf" class="download-btn icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download CV
+            </a>
+            
         </div>
     </section>
     <!-- About Section -->

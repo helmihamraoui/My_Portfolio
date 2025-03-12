@@ -150,4 +150,32 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
     responseMessage.innerHTML = "Sending...";
     responseMessage.style.color = "blue";
+});// Theme Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.querySelector(".theme-icon");
+
+    // Check localStorage for saved theme preference
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.textContent = "☀️"; // Sun icon for light mode
+    } else {
+        document.body.classList.remove("dark-mode");
+        themeIcon.textContent = "🌙"; // Moon icon for dark mode
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Update the icon based on the current theme
+        if (document.body.classList.contains("dark-mode")) {
+            themeIcon.textContent = "☀️"; // Switch to sun icon
+            localStorage.setItem("theme", "dark"); // Save preference
+        } else {
+            themeIcon.textContent = "🌙"; // Switch to moon icon
+            localStorage.setItem("theme", "light"); // Save preference
+        }
+    });
 });

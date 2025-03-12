@@ -751,7 +751,7 @@ nav ul li a.active-link::after {
 /* Professional Hover Effects */
 .education-item:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    box-shadow:  20px 25px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Scroll Progress Indicator */
@@ -763,4 +763,202 @@ nav ul li a.active-link::after {
     background: #007bff;
     z-index: 9999;
     transition: width 0.3s ease-out;
+}
+
+.download-btn.icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: buttonEntrance 0.8s ease-out;
+}
+
+.download-btn.icon:hover {
+    background: #2d2d2d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn.icon:active {
+    transform: translateY(1px);
+}
+
+.download-btn.icon svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow animation on hover */
+.download-btn.icon:hover svg {
+    animation: downloadArrow 1s infinite;
+}
+
+/* Button entrance animation */
+@keyframes buttonEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Download arrow animation */
+@keyframes downloadArrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+/* Optional: Add ripple effect on click */
+.download-btn.icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.download-btn.icon:active::after {
+    width: 200px;
+    height: 200px;
+}
+/* General Button Styles */
+#theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Blue color for light mode */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+#theme-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Dark Mode Button Styles */
+body.dark-mode #theme-toggle {
+    background-color: #bb86fc; /* Purple color for dark mode */
+    color: white;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: #9c57f5; /* Slightly darker purple on hover */
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark-mode nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.dark-mode nav ul li a {
+    color: #ffffff;
+}
+body.dark-mode section {
+    background-color: #1e1e1e;
+}
+body.dark-mode .hero-description p,
+body.dark-mode .about-content p,
+body.dark-mode .skill-card p,
+body.dark-mode .service-card p,
+body.dark-mode .portfolio-overlay p {
+    color: #cccccc;
+}
+body.dark-mode .submit-btn {
+    background-color: #bb86fc;
+}
+body.dark-mode .submit-btn:hover {
+    background-color: #9c57f5;
+}
+body.dark-mode .contact-info {
+    background-color: #1e1e1e;
+}
+body.dark-mode .contact-info h3 {
+    color: #ffffff;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Soft white for better readability */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #c5c1c1; /* Soft white for headings and paragraphs */
+}
+
+body.dark-mode a {
+    color: #bb86fc; /* Purple for links */
+}
+
+body.dark-mode a:hover {
+    color: #9c57f5; /* Slightly darker purple on hover */
+}
+
+.theme-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #1f1f1f, #292929);
+    box-shadow: 6px 6px 12px #141414, -6px -6px 12px #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+    background: linear-gradient(145deg, #252525, #2e2e2e);
+    box-shadow: 4px 4px 10px #121212, -4px -4px 10px #3a3a3a;
+}
+
+.theme-toggle:active {
+    box-shadow: inset 4px 4px 10px #121212, inset -4px -4px 10px #3a3a3a;
+}
+
+.theme-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode .theme-icon {
+    transform: rotate(180deg);
 }
