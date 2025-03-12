@@ -880,18 +880,21 @@ body.dark-mode #theme-toggle:hover {
 }
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #121212;
+    background-color: #b4acac;
     color: #ffffff;
 }
 body.dark-mode nav {
-    background-color: #1e1e1e;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #242323;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 body.dark-mode nav ul li a {
     color: #ffffff;
 }
 body.dark-mode section {
     background-color: #1e1e1e;
+}
+body.dark-mode .hero {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the transparency as needed */
 }
 body.dark-mode .hero-description p,
 body.dark-mode .about-content p,
