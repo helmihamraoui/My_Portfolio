@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helmi Hamraoui - Full Stack Developer Portfolio">
+    <meta name="keywords" content="portfolio, web developer, full stack, Helmi Hamraoui">
+    <meta name="author" content="Helmi Hamraoui">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <title>Portfolio</title>
     <link rel="website icon" type="png" href="img/mylogo.png">
@@ -15,6 +25,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#do">What I Do</a></li>
             <li><a href="#portf">Projects</a></li>
@@ -30,12 +41,14 @@
         <div class="hero-image">
             <img src="./img/myPhoto.png" alt="Profile Picture">
         </div>
-        <div class="hero-description">
-            <h1>Hi, I'm Helmi Hamraoui</h1>
-            <p>Web Developer</p>
-            <p>Specializing in Full Stack Development</p>
-            <p>I'm proficient in Java, JavaScript, and Python</p>
-            <a href="./pdfs/helmi-hamraoui-cv.pdf" download="Helmi_Hamraoui_CV.pdf" class="download-btn icon">
+        <div class="hero-description" data-aos="fade-right">
+            <h1>Hi, I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+            <div class="typing-container">
+                <p class="typing-line">Full Stack Developer</p>
+                <p class="typing-line">Web & Mobile Enthusiast</p>
+                <p class="typing-line">Problem Solver</p>
+            </div>
+            <a href="./pdfs/Helmi-Hamraoui-CV.pdf" download="Helmi-Hamraoui-CV.pdf" class="download-btn icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
@@ -47,14 +60,14 @@
         </div>
     </section>
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-up">
         <div class="about-content">
             <h2>About Me</h2>
             <p>Passionate about Web Development and its diverse applications, I sharpened my competencies enrolling in an intensive bootcamp in IT. Thanks to my fast learning abilities and eye for details, I was able to fully grasp the content, achieving outstanding results and showcasing my skills in innovative real-life applications. I enjoy collaborating with others and always up for a challenge, I make sure to welcome every learning opportunity and I aim to join a dynamic team in which I am able to put my skills into practice and build a fulfilling career as a developer.</p>
         </div>
     </section>
     <!-- Education Section -->
-    <section class="education" id="education">
+    <section class="education" id="education" data-aos="fade-up" data-aos-delay="100">
         <div class="education-container">
             <h2>Education</h2>
             <div class="education-grid">
@@ -83,8 +96,37 @@
             </div>
         </div>
     </section>
+    <!-- Professional Experience Section -->
+    <section class="experience" id="experience" data-aos="fade-up" data-aos-delay="150">
+        <div class="experience-container">
+            <h2>Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <h3>Stagiaire Développeur Full Stack</h3>
+                    <p class="company">Tunis</p>
+                    <p class="date">05/2025 – 08/2025</p>
+                    <div class="experience-details">
+                        <h4>ERP pour centre esthétique</h4>
+                        <ul>
+                            <li>Analyse des besoins métiers du client (gestion des rendez-vous, fiches clients, produits, etc.)</li>
+                            <li>Conception et développement d'un ERP personnalisé (front-end + back-end)</li>
+                            <li>Technologies : Django, Angular, PostgreSQL, Tailwind CSS</li>
+                        </ul>
+                        <h4>Développement d'un CRM de messagerie multicanal</h4>
+                        <ul>
+                            <li>Intégration des APIs de WhatsApp Cloud API, Messenger, Instagram (Graph API), Gmail</li>
+                            <li>Réception, enregistrement et réponse automatique aux messages clients via un back-office</li>
+                            <li>Création d'un tableau de bord regroupant les conversations par canal et par utilisateur</li>
+                            <li>Gestion des webhooks et authentification OAuth (Facebook/Meta)</li>
+                            <li>Technologies : Django, REST API, Webhooks, OAuth, JavaScript, PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" data-aos="fade-up" data-aos-delay="200">
         <div class="skills-container">
             <h2>My Skills</h2>
             <div class="skills-grid">
@@ -124,7 +166,7 @@
         </div>
     </section>
     <!-- Services Section -->
-    <section class="services" id="do">
+    <section class="services" id="do" data-aos="fade-up" data-aos-delay="100">
         <div class="services-container">
             <h2>What I Do</h2>
             <div class="services-grid">
@@ -147,7 +189,7 @@
         </div>
     </section>
     <!-- Portfolio Section -->
-    <section class="portfolio" id="portf">
+    <section class="portfolio" id="portf" data-aos="fade-up" data-aos-delay="200">
         <div class="portfolio-container">
             <h2>My Projects</h2>
             <div class="portfolio-grid">
@@ -179,7 +221,7 @@
         </div>
     </section>
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
         <div class="contact-container">
             <h2>Get in Touch</h2>
             <div class="contact-content">
@@ -221,6 +263,62 @@
             </div>
         </div>
     </section>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Typing Effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const typed = new Typed('.typed-text', {
+                strings: ['Helmi Hamraoui', 'a Full Stack Developer', 'a Problem Solver', 'a Tech Enthusiast'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+                autoInsertCss: true
+            });
+
+            // Animate skill bars on scroll
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const animateSkillBars = () => {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.transition = 'width 2s ease-in-out';
+                        bar.style.width = width;
+                    }, 100);
+                });
+            };
+
+            // Intersection Observer for skill bars
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observe skills section
+            const skillsSection = document.querySelector('.skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+        });
+    </script>
 </body>
 </html>
