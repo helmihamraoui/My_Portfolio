@@ -23,18 +23,23 @@
     <nav>
         <a href="index.html"><img src="./img/mylogo.png" alt="logo" id="logo"></a>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#do">What I Do</a></li>
-            <li><a href="#portf">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="nav-home">Home</a></li>
+            <li><a href="#about" data-i18n="nav-about">About</a></li>
+            <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+            <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+            <li><a href="#do" data-i18n="nav-whatido">What I Do</a></li>
+            <li><a href="#portf" data-i18n="nav-projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-toggle">
-            <span class="theme-icon">🌙</span>
-        </button>
-        
+        <div class="nav-controls">
+            <div class="lang-switcher">
+                <button id="lang-fr" class="lang-btn">FR</button>
+                <button id="lang-en" class="lang-btn">EN</button>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
     </nav>
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -42,55 +47,61 @@
             <img src="./img/myPhoto.png" alt="Profile Picture">
         </div>
         <div class="hero-description" data-aos="fade-right">
-            <h1>Hi, I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+            <h1 data-i18n="hero-hi">Hi, I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
             <div class="typing-container">
-                <p class="typing-line">Full Stack Developer</p>
-                <p class="typing-line">Web & Mobile Enthusiast</p>
-                <p class="typing-line">Problem Solver</p>
+                <p class="typing-line" data-i18n="hero-title1">Full Stack Developer</p>
+                <p class="typing-line" data-i18n="hero-title2">Web & Mobile Enthusiast</p>
+                <p class="typing-line" data-i18n="hero-title3">Problem Solver</p>
             </div>
-            <a href="./pdfs/Helmi-Hamraoui-Resume-fr.pdf" download="Helmi-Hamraoui-Resume-fr.pdf" class="download-btn icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download CV +
-            </a>
+            <div class="cv-dropdown">
+                <button class="download-btn icon" id="cv-download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span data-i18n="cv-download">Download CV +</span>
+                </button>
+                <div class="cv-options" id="cv-options">
+                    <a href="./pdfs/Helmi_Hamraoui_fr.pdf" download="Helmi_Hamraoui_fr.pdf">FR</a>
+                    <a href="./pdfs/Helmi_Hamraoui_en.pdf" download="Helmi_Hamraoui_en.pdf">EN</a>
+                </div>
+            </div>
             
         </div>
     </section>
     <!-- About Section -->
     <section class="about" id="about" data-aos="fade-up">
         <div class="about-content">
-            <h2>About Me</h2>
-            <p>Passionate about Web Development and its diverse applications, I sharpened my competencies enrolling in an intensive bootcamp in IT. Thanks to my fast learning abilities and eye for details, I was able to fully grasp the content, achieving outstanding results and showcasing my skills in innovative real-life applications. I enjoy collaborating with others and always up for a challenge, I make sure to welcome every learning opportunity and I aim to join a dynamic team in which I am able to put my skills into practice and build a fulfilling career as a developer.</p>
+            <h2 data-i18n="about-title">About Me</h2>
+            <p data-i18n="about-text">Passionate about Web Development and its diverse applications, I thickened my competencies enrolling in an intensive bootcamp in IT. Thanks to my fast learning abilities and eye for details, I was able to fully grasp the content, achieving outstanding results and showcasing my skills in innovative real-life applications. I enjoy collaborating with others and always up for a challenge, I make sure to welcome every learning opportunity and I aim to join a dynamic team in which I am able to put my skills into practice and build a fulfilling career as a developer.</p>
         </div>
     </section>
     <!-- Education Section -->
     <section class="education" id="education" data-aos="fade-up" data-aos-delay="100">
         <div class="education-container">
-            <h2>Education</h2>
+            <h2 data-i18n="edu-title">Education</h2>
             <div class="education-grid">
                 <div class="education-item">
-                    <h3>Baccalaureate Diploma in Information Technology</h3>
-                    <p>Secondary School Ibn Haithem, Beja</p>
-                    <p>09/2022 – 06/2023</p>
+                    <h3 data-i18n="edu-item1-h">Baccalaureate Diploma in Information Technology</h3>
+                    <p data-i18n="edu-item1-p1">Secondary School Ibn Haithem, Beja</p>
+                    <p data-i18n="edu-item1-p2">09/2022 – 06/2023</p>
                 </div>
                 <div class="education-item">
-                    <h3>1st Year in Computer Engineering</h3>
-                    <p>ISSAT Kasserine</p>
-                    <p>09/2023 – 05/2024</p>
-                    <p>Currently completing first year of computer engineering studies</p>
+                    <h3 data-i18n="edu-item2-h">1st Year in Computer Engineering</h3>
+                    <p data-i18n="edu-item2-p1">ISSAT Kasserine</p>
+                    <p data-i18n="edu-item2-p2">09/2023 – 05/2024</p>
+                    <p data-i18n="edu-item2-p3">Currently completing first year of computer engineering studies</p>
                 </div>
                 <div class="education-item">
-                    <h3>American Certification in Full Stack Web Development</h3>
-                    <p>Coding Dojo Africa</p>
-                    <p>09/2024 – 02/2025</p>
+                    <h3 data-i18n="edu-item3-h">American Certification in Full Stack Web Development</h3>
+                    <p data-i18n="edu-item3-p1">Coding Dojo Africa</p>
+                    <p data-i18n="edu-item3-p2">09/2024 – 02/2025</p>
                     <ul>
-                        <li>Intensive bootcamp in 3 full stacks (Python, JS, and Java)</li>
-                        <li>Passed Belt exams, assignments and code reviews</li>
-                        <li>Developed three projects with innovative features</li>
-                        <li>Soft skills and English Language training</li>
+                        <li data-i18n="edu-item3-li1">Intensive bootcamp in 3 full stacks (Python, JS, and Java)</li>
+                        <li data-i18n="edu-item3-li2">Passed Belt exams, assignments and code reviews</li>
+                        <li data-i18n="edu-item3-li3">Developed three projects with innovative features</li>
+                        <li data-i18n="edu-item3-li4">Soft skills and English Language training</li>
                     </ul>
                 </div>
             </div>
@@ -99,28 +110,34 @@
     <!-- Professional Experience Section -->
     <section class="experience" id="experience" data-aos="fade-up" data-aos-delay="150">
         <div class="experience-container">
-            <h2>Professional Experience</h2>
+            <h2 data-i18n="exp-title">Professional Experience</h2>
             <div class="experience-grid">
                 <div class="experience-item">
-                    <h3>Développeur Full Stack</h3>
-                    <p class="company">Tunis</p>
-                    <p class="date">05/2025 – 08/2025</p>
+                    <h3 data-i18n="exp-item1-h">Full Stack Developer</h3>
+                    <p class="company" data-i18n="exp-item1-p1">Tunis</p>
+                    <p class="date" data-i18n="exp-item1-p2">05/2025 – Present</p>
                     <div class="experience-details">
-                        <h4>ERP pour centre esthétique</h4>
+                        <h4 data-i18n="exp-item1-sub1-h">ERP System</h4>
                         <ul>
-                            <li>Analyse des besoins métiers du client (gestion des rendez-vous, fiches clients, produits, etc.)</li>
-                            <li>Conception et développement d'un ERP personnalisé (front-end + back-end)</li>
-                            <li>Technologies : Django, Angular, PostgreSQL, Tailwind CSS</li>
+                            <li data-i18n="exp-item1-sub1-li1">Analyse des besoins métiers du client (gestion des rendez-vous, fiches clients, produits, etc.)</li>
+                            <li data-i18n="exp-item1-sub1-li2">Conception et développement d'un ERP personnalisé avec notifications d'emails automatisées pour les suivis post-opératoires et un module de messagerie pour les médecins.</li>
+                            <li data-i18n="exp-item1-sub1-li3">Technologies : Django, Angular, PostgreSQL, Tailwind CSS</li>
                         </ul>
-                        <h4>Développement d'un CRM de messagerie multicanal</h4>
+                        <h4 data-i18n="exp-item1-sub2-h">Marketing CRM</h4>
                         <ul>
-                            <li>Intégration des APIs de WhatsApp Cloud API, Messenger, Instagram (Graph API), Gmail</li>
-                            <li>Réception, enregistrement et réponse automatique aux messages clients via un back-office</li>
-                            <li>Création d'un tableau de bord regroupant les conversations par canal et par utilisateur</li>
-                            <li>Gestion des webhooks et authentification OAuth (Facebook/Meta)</li>
-                            <li>Technologies : Django, REST API, Webhooks, OAuth, JavaScript, PostgreSQL</li>
-                            <li>Ajout d’une fonctionnalité de gestion des publications sur Instagram et Facebook : récupération et publication de posts via les APIs Meta</li>
-
+                            <li data-i18n="exp-item1-sub2-li1">Intégration des APIs de WhatsApp Cloud API, Messenger, Instagram (Graph API), Gmail</li>
+                            <li data-i18n="exp-item1-sub2-li2">Réception, enregistrement et réponse automatique aux messages clients via un back-office</li>
+                            <li data-i18n="exp-item1-sub2-li3">Gestion des webhooks et authentification OAuth (Facebook/Meta)</li>
+                            <li data-i18n="exp-item1-sub2-li4">Technologies : Django, REST API, Webhooks, OAuth, JavaScript, PostgreSQL</li>
+                        </ul>
+                        <h4 data-i18n="exp-item1-sub3-h">Automation & AI</h4>
+                        <ul>
+                            <li data-i18n="exp-item1-sub3-li1">Utilisation de Selenium pour la publication automatique sur les marketplaces</li>
+                            <li data-i18n="exp-item1-sub3-li2">Intégration de l'API HeyGen pour la génération de contenu vidéo par IA</li>
+                        </ul>
+                        <h4 data-i18n="exp-item1-sub4-h">Data Intelligence</h4>
+                        <ul>
+                            <li data-i18n="exp-item1-sub4-li1">Implémentation d'une fonctionnalité pour prédire les tendances des tarifs hôteliers</li>
                         </ul>
                     </div>
                 </div>
@@ -130,19 +147,19 @@
     <!-- Skills Section -->
     <section class="skills" id="skills" data-aos="fade-up" data-aos-delay="200">
         <div class="skills-container">
-            <h2>My Skills</h2>
+            <h2 data-i18n="skills-title">My Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon"><img src="./img/front-end.png" alt="front-end"></div>
-                    <h3>Front-end</h3>
-                    <p>HTML, CSS, JavaScript, React, Angular, Material UI, Bootstrap, TypeScript</p>
+                    <h3 data-i18n="skills-frontend-h">Front-end</h3>
+                    <p>HTML, CSS, JavaScript, React JS, Angular, Material UI, Bootstrap, TypeScript</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%"></div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><img src="./img/backend.png" alt="back-end"></div>
-                    <h3>Back-end</h3>
+                    <h3 data-i18n="skills-backend-h">Back-end</h3>
                     <p>Flask, Python, Express JS, Node JS, Socket.io, Java, SpringBoot, SpringSecurity, WebSocket</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 91%"></div>
@@ -150,7 +167,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><img src="./img/database-management.png" alt="database"></div>
-                    <h3>DataBase</h3>
+                    <h3 data-i18n="skills-db-h">DataBase</h3>
                     <p>MySQL, MongoDB, SQLite</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 90%"></div>
@@ -158,8 +175,8 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔧</div>
-                    <h3>Tools</h3>
-                    <p>Git, Figma, Trello, VS Code, Postman, IntelliJ</p>
+                    <h3 data-i18n="skills-tools-h">Tools</h3>
+                    <p>Git, Figma, Trello, VS Code, Sublime Text, Postman, IntelliJ</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 80%"></div>
                     </div>
@@ -170,22 +187,22 @@
     <!-- Services Section -->
     <section class="services" id="do" data-aos="fade-up" data-aos-delay="100">
         <div class="services-container">
-            <h2>What I Do</h2>
+            <h2 data-i18n="services-title">What I Do</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><img src="./img/software.png" alt="web dev"></div>
-                    <h3>Web Development</h3>
-                    <p>Custom website development from concept to deployment. Responsive design and clean code.</p>
+                    <h3 data-i18n="services-web-h">Web Development</h3>
+                    <p data-i18n="services-web-p">Custom website development from concept to deployment. Responsive design and clean code.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><img src="./img/web-design.png" alt="design"></div>
-                    <h3>Design</h3>
-                    <p>Keeping it simple. Centered on content and functionality</p>
+                    <h3 data-i18n="services-design-h">Design</h3>
+                    <p data-i18n="services-design-p">Keeping it simple. Centered on content and functionality</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><img src="./img/problem-solving-skills.png" alt="problem-solving"></div>
-                    <h3>Problem Solving</h3>
-                    <p>Creative approach to research, analysis, and decision-making</p>
+                    <h3 data-i18n="services-solve-h">Problem Solving</h3>
+                    <p data-i18n="services-solve-p">Creative approach to research, analysis, and decision-making</p>
                 </div>
             </div>
         </div>
@@ -193,30 +210,30 @@
     <!-- Portfolio Section -->
     <section class="portfolio" id="portf" data-aos="fade-up" data-aos-delay="200">
         <div class="portfolio-container">
-            <h2>My Projects</h2>
+            <h2 data-i18n="portfolio-title">My Projects</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <img src="./img/regive.png" alt="Regive">
                     <div class="portfolio-overlay">
-                        <h3>I developed a website that aims to allow individuals to exchange items or donate them in a user-friendly way encouraging community engagement, charity, and recycling.</h3>
+                        <h3 data-i18n="portfolio-p1-h">I developed a website that aims to allow individuals to exchange items or donate them in a user-friendly way encouraging community engagement, charity, and recycling.</h3>
                         <p>HTML, CSS, JavaScript, Bootstrap, Flask, Python, socket.io, MySQL</p>
-                        <a href="https://github.com/helmihamraoui/Python-Project" class="portfolio-link">View Project</a>
+                        <a href="https://github.com/helmihamraoui/Python-Project" class="portfolio-link" data-i18n="portfolio-view">View Project</a>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="./img/cooke.png" alt="Cooke Me">
                     <div class="portfolio-overlay">
-                        <h3>A web application that helps users discover and create recipes by solving everyday common challenges like lack of ingredients according to dietary needs/preferences, or time constraints. Our platform provides a seamless and dynamic user experience allowing them to get tailored recipes with the ability to chat with users providing further support and fostering community engagement.</h3>
+                        <h3 data-i18n="portfolio-p2-h">A web application that helps users discover and create recipes by solving everyday common challenges like lack of ingredients according to dietary needs/preferences, or time constraints. Our platform provides a seamless and dynamic user experience allowing them to get tailored recipes with the ability to chat with users providing further support and fostering community engagement.</h3>
                         <p>socket.io, HTML, CSS, Bootstrap, Angular, Material UI, TypeScript, Express.js, Node.js, mongoDB</p>
-                        <a href="https://github.com/med-mokhtar-nasrali/MERN-Project" class="portfolio-link">View Project</a>
+                        <a href="https://github.com/med-mokhtar-nasrali/MERN-Project" class="portfolio-link" data-i18n="portfolio-view">View Project</a>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="./img/carelink.png" alt="Care Link">
                     <div class="portfolio-overlay">
-                        <h3>A web application that aims to digitalize the healthcare and clinic management sector by allowing patients to book appointments, visualize medical history while improving communication between Doctors, Medical Staff, and Patients making the process more efficient and reducing the risk of error. By streamlining these processes, CareLink's main goal is to improve the overall patient experience making it easier and simpler.</h3>
+                        <h3 data-i18n="portfolio-p3-h">A web application that aims to digitalize the healthcare and clinic management sector by allowing patients to book appointments, visualize medical history while improving communication between Doctors, Medical Staff, and Patients making the process more efficient and reducing the risk of error. By streamlining these processes, CareLink's main goal is to improve the overall patient experience making it easier and simpler.</h3>
                         <p>HTML, CSS, Bootstrap, Angular, TypeScript, Java, SpringBoot, SpringSecurity, WebSocket, MySQL</p>
-                        <a href="https://github.com/helmihamraoui/Project-Java" class="portfolio-link">View Project</a>
+                        <a href="https://github.com/helmihamraoui/Project-Java" class="portfolio-link" data-i18n="portfolio-view">View Project</a>
                     </div>
                 </div>
             </div>
@@ -225,35 +242,35 @@
     <!-- Contact Section -->
     <section class="contact" id="contact" data-aos="fade-up">
         <div class="contact-container">
-            <h2>Get in Touch</h2>
+            <h2 data-i18n="contact-title">Get in Touch</h2>
             <div class="contact-content">
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <input type="hidden" name="access_key" value="307ffe27-374c-4919-9601-e7b306ae99ed">
     
                     <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Your Name" >
+                        <input type="text" name="name" id="name" placeholder="Your Name" data-i18n-placeholder="contact-name">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Your Email" >
+                        <input type="email" name="email" id="email" placeholder="Your Email" data-i18n-placeholder="contact-email">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" rows="5" placeholder="Your Message" ></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message" data-i18n-placeholder="contact-msg"></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" data-i18n="contact-send">Send Message</button>
                     <p id="responseMessage"></p>
                 </form>
                 
                 <div class="contact-info">
                     <div class="info-item">
-                        <h3>📍 Location</h3>
-                        <p>Ariana, Tunisia</p>
+                        <h3 data-i18n="contact-loc-h">📍 Location</h3>
+                        <p data-i18n="contact-loc-p">Ariana, Tunisia</p>
                     </div>
                     <div class="info-item">
-                        <h3>📞 Phone</h3>
+                        <h3 data-i18n="contact-phone-h">📞 Phone</h3>
                         <p>+216 55224300</p>
                     </div>
                     <div class="info-item">
-                        <h3>📧 Email</h3>
+                        <h3 data-i18n="contact-email-h">📧 Email</h3>
                         <p>helmihamraoui54@gmail.com</p>
                     </div>
                     <div class="social-links">
@@ -270,57 +287,5 @@
     <!-- Typed.js for typing effect -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Typing Effect
-        document.addEventListener('DOMContentLoaded', function() {
-            const typed = new Typed('.typed-text', {
-                strings: ['Helmi Hamraoui', 'a Full Stack Developer', 'a Problem Solver', 'a Tech Enthusiast'],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 2000,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|',
-                autoInsertCss: true
-            });
-
-            // Animate skill bars on scroll
-            const skillBars = document.querySelectorAll('.skill-progress');
-            
-            const animateSkillBars = () => {
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.transition = 'width 2s ease-in-out';
-                        bar.style.width = width;
-                    }, 100);
-                });
-            };
-
-            // Intersection Observer for skill bars
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateSkillBars();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            // Observe skills section
-            const skillsSection = document.querySelector('.skills');
-            if (skillsSection) {
-                observer.observe(skillsSection);
-            }
-        });
-    </script>
 </body>
 </html>
