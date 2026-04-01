@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "hero-title1": "Full Stack Developer",
             "hero-title2": "Web & Mobile Enthusiast",
             "hero-title3": "Problem Solver",
-            "cv-download": "Download CV +",
+            "cv-download": "Download CV",
             "about-title": "About Me",
             "about-text": "Passionate about Web Development and its diverse applications, I strengthened my competencies enrolling in an intensive bootcamp in IT. Thanks to my fast learning abilities and eye for details, I was able to fully grasp the content, achieving outstanding results and showcasing my skills in innovative real-life applications. I enjoy collaborating with others and always up for a challenge, I make sure to welcome every learning opportunity and I aim to join a dynamic team in which I am able to put my skills into practice and build a fulfilling career as a developer.",
             "edu-title": "Education",
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "hero-title1": "Développeur Full Stack",
             "hero-title2": "Passionné Web & Mobile",
             "hero-title3": "Résolveur de problèmes",
-            "cv-download": "Télécharger CV +",
+            "cv-download": "Télécharger CV",
             "about-title": "À propos de moi",
             "about-text": "Passionné par le Développement Web et ses diverses applications, j'ai renforcé mes compétences en m'inscrivant à un bootcamp intensif en informatique. Grâce à mes capacités d'apprentissage rapide et mon sens du détail, j'ai pu saisir pleinement le contenu, obtenant des résultats exceptionnels et démontrant mes compétences dans des applications innovantes de la vie réelle. J'aime collaborer avec les autres et je suis toujours prêt à relever un défi, je veille à accueillir chaque opportunité d'apprentissage et je vise à rejoindre une équipe dynamique dans laquelle je pourrai mettre mes compétences en pratique et bâtir une carrière enrichissante en tant que développeur.",
             "edu-title": "Éducation",
@@ -271,6 +271,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
         if (btnEn) btnEn.classList.toggle('active', lang === 'en');
 
+        // Update CV download link
+        const cvBtnLink = document.getElementById('cv-download-btn');
+        if (cvBtnLink) {
+            cvBtnLink.href = `./pdfs/Helmi_Hamraoui_${lang}.pdf`;
+            cvBtnLink.download = `Helmi_Hamraoui_${lang}.pdf`;
+        }
+
         // Restart Typed.js with new strings
         if (typedInstance) typedInstance.destroy();
         if (typeof Typed !== 'undefined') {
@@ -291,21 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnEn = document.getElementById('lang-en');
     if (btnFr) btnFr.addEventListener('click', () => setLanguage('fr'));
     if (btnEn) btnEn.addEventListener('click', () => setLanguage('en'));
-
-    // CV Dropdown Logic
-    const cvBtn = document.getElementById('cv-download-btn');
-    const cvOptions = document.getElementById('cv-options');
-
-    if (cvBtn && cvOptions) {
-        cvBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            cvOptions.classList.toggle('show');
-        });
-
-        document.addEventListener('click', () => {
-            cvOptions.classList.remove('show');
-        });
-    }
 
     // Initialize Language
     setLanguage(currentLang);
