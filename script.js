@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "nav-contact": "Contact",
             "hero-hi": "Hi, I'm ",
             "hero-title1": "Full Stack Developer",
-            "hero-title2": "Web & Mobile Enthusiast",
+            "hero-title2": "Enthusiast in Computer Science",
             "hero-title3": "Problem Solver",
             "cv-download": "Download CV",
             "about-title": "About Me",
@@ -98,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
             "edu-item1-h": "Baccalaureate Diploma in IT",
             "edu-item1-p1": "Secondary School Ibn Haithem, Beja",
             "edu-item1-p2": "09/2022 – 06/2023",
-            "edu-item2-h": "1st Year in Computer Engineering",
-            "edu-item2-p1": "ISSAT Kasserine",
-            "edu-item2-p2": "09/2023 – 05/2024",
-            "edu-item2-p3": "Currently completing first year of computer engineering studies",
+            "edu-item2-h": "1st Year (licence Genie Logiciel et System Intelligence [GLIA])",
+            "edu-item2-p1": "ITeam University",
+            "edu-item2-p2": "09/2026 – 05/2027",
+            "edu-item2-p3": "Currently studying first year of computer engineering studies",
             "edu-item3-h": "American Certification in Full Stack Web Development",
             "edu-item3-p1": "Coding Dojo Africa",
             "edu-item3-p2": "09/2024 – 02/2025",
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "nav-contact": "Contact",
             "hero-hi": "Salut, je suis ",
             "hero-title1": "Développeur Full Stack",
-            "hero-title2": "Passionné Web & Mobile",
+            "hero-title2": "Passionné d'Informatique",
             "hero-title3": "Résolveur de problèmes",
             "cv-download": "Télécharger CV",
             "about-title": "À propos de moi",
@@ -174,10 +174,10 @@ document.addEventListener('DOMContentLoaded', function () {
             "edu-item1-h": "Baccalauréat en Informatique",
             "edu-item1-p1": "Lycée Ibn Haithem, Béja",
             "edu-item1-p2": "09/2022 – 06/2023",
-            "edu-item2-h": "1ère année en Ingénierie Informatique",
-            "edu-item2-p1": "ISSAT Kasserine",
-            "edu-item2-p2": "09/2023 – 05/2024",
-            "edu-item2-p3": "Actuellement en cours de première année d'études en ingénierie informatique",
+            "edu-item2-h": "1ère année (licence Génie Logiciel et Systèmes Intelligents [GLIA])",
+            "edu-item2-p1": "ITeam University",
+            "edu-item2-p2": "09/2026 – 05/2027",
+            "edu-item2-p3": "Actuellement en première année d'études en génie logiciel",
             "edu-item3-h": "Certification Américaine en Développement Web Full Stack",
             "edu-item3-p1": "Coding Dojo Africa",
             "edu-item3-p2": "09/2024 – 02/2025",
@@ -274,8 +274,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update CV download link
         const cvBtnLink = document.getElementById('cv-download-btn');
         if (cvBtnLink) {
-            cvBtnLink.href = `./pdfs/Helmi_Hamraoui_${lang}.pdf`;
-            cvBtnLink.download = `Helmi_Hamraoui_${lang}.pdf`;
+            const cvFilename = lang === 'fr' ? 'helmi_hamraoui_cv_fr' : 'Helmi_Hamraoui_en';
+            cvBtnLink.href = `./pdfs/${cvFilename}.pdf`;
+            cvBtnLink.download = `${cvFilename}.pdf`;
         }
 
         // Restart Typed.js with new strings
